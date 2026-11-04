@@ -1,5 +1,5 @@
 import 'package:path/path.dart';
-import 'package:relax_dont_do_it/measure_model.dart';
+import 'package:relax_dont_do_it/data/measure_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 typedef Db_res = Future<void>;
