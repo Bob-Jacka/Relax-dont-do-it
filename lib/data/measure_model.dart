@@ -1,3 +1,5 @@
+
+//Model for saving in inner resources
 class MeasureModel {
   final double data;
   final DateTime date;

@@ -16,7 +16,7 @@ final class DbConnector {
 
   Future<Database> createDatabase() async {
     try {
-      database = openDatabase(
+        database = openDatabase(
         join(await getDatabasesPath(), '$_dbName.db'),
         onCreate: (db, version) {
           // Run the CREATE TABLE statement on the database.
@@ -26,9 +26,13 @@ final class DbConnector {
         },
         version: 1,
       );
-    } catch (e) {}
+    } catch (e) {
+      rethrow;
+    }
+    throw Exception(); //some kind of kostyl
   }
 
+  //Select and return query results
   Select_db_res selectMeasures() async {
     final db = await database;
     return db.query(_dbName);
@@ -36,7 +40,7 @@ final class DbConnector {
 
   Db_res deleteMeasure() async {
     final db = await database;
-    await db.delete(_dbName); //TODO continue add logic
+    await db.delete(_dbName, where: '');
   }
 
   Db_res insertMeasure(MeasureModel measure) async {
