@@ -12,7 +12,7 @@ class RelaxApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Relax do not do it',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 218, 225, 22))),
 
       routes: {'/': (context) => AppPage()},
     );

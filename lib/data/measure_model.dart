@@ -1,8 +1,8 @@
 
 //Model for saving in inner resources
-class MeasureModel {
+final class MeasureModel {
   final double data;
-  final DateTime date;
+  final String date;
 
   const MeasureModel({required this.data, required this.date});
 
@@ -12,6 +12,6 @@ class MeasureModel {
 
   @override
   String toString() {
-    return 'MeasureModel{data: $data, name: $date}';
+    return 'MeasureModel{data: $data, date: $date}';
   }
 }
